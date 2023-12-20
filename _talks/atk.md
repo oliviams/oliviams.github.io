@@ -4,7 +4,7 @@ collection: talks
 type: "Lecture"
 permalink: /talks/atk-2022
 venue: "UCL: Arts and Sciences BASc"
-date: 2022-12-16
+date: 2022-12-16 and 2023-12-15
 location: "London, UK"
 ---
 
