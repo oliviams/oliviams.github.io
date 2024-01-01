@@ -15,3 +15,5 @@ My PhD is funded by the Leverhulme Trust as part of the [Leverhulme Doctoral Tra
 Research Interests
 ======
 My research interests lie in understanding the emergence of cooperation within multi-agent systems, with particular focus on signalling and irrational behaviour. My approach to this problem come both from a theoretical perspective, as well as investigating the application of this research to international relations and conflict studies. 
+
+[My CV.](http://oliviams.github.io/files/Academic_CV.pdf) 
