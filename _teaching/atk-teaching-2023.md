@@ -2,7 +2,7 @@
 title: "Approaches to Knowledge"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
+permalink: /teaching/atk-teaching-2023
 venue: "UCL, Arts and Sciences"
 date: 2023-10-01
 location: "London, UK"
