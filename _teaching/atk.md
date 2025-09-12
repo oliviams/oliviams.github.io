@@ -2,7 +2,7 @@
 title: "Approaches to Knowledge"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/atk-teaching-2022
+permalink: /teaching/atk
 venue: "UCL, Arts and Sciences"
 years:
   - 2022
