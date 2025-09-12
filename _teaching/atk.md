@@ -4,7 +4,10 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/atk-teaching-2022
 venue: "UCL, Arts and Sciences"
-date: 2022-10-01
+years:
+  - 2022
+  - 2023
+  - 2024
 location: "London, UK"
 ---
 
