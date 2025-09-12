@@ -1,8 +1,3 @@
-$masthead-bg-color: #2E475F;
-$masthead-text-color: #ffffff;
-$masthead-link-color: #FCF2DF;
-$masthead-link-hover-color: #c49b61;
-
 /* ==========================================================================
    MASTHEAD
    ========================================================================== */
@@ -14,10 +9,7 @@ $masthead-link-hover-color: #c49b61;
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
   z-index: 20;
-  background-color: $masthead-bg-color;
-  color: $masthead-text-color;
-  
-  &__inner-wrap {
+  &inner-wrap {
     @include container;
     @include clearfix;
     padding: 1em 1em 1em;
@@ -30,16 +22,10 @@ $masthead-link-hover-color: #c49b61;
     }
     a {
       text-decoration: none;
-      color: $masthead-link-color; 
-       
-      &:hover {
-        color: $masthead-link-hover-color;
-      }
     }
   }
 }
-
-.masthead__menu {
+.mastheadmenu {
   ul {
     margin: 0;
     padding: 0;
@@ -47,7 +33,6 @@ $masthead-link-hover-color: #c49b61;
     list-style-type: none;
   }
 }
-
 .masthead__menu-item {
   display: block;
   list-style-type: none;
