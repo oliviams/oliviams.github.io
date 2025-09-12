@@ -40,6 +40,7 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-.masthead a:hover {
-  color: #c49b61 !important;
-}
+$masthead-link-color: #ffffff;
+$masthead-link-color-hover: #ffcc00;
+
+@import "minimal-mistakes";
