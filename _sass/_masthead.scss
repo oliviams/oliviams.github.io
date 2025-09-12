@@ -25,8 +25,8 @@
     }
     a {
       text-decoration: none;
-      color: $masthead-link-color; // Add default link color here
-      
+      color: $masthead-link-color; 
+       
       &:hover {
         color: $masthead-link-hover-color;
       }
