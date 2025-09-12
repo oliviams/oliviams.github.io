@@ -2,7 +2,6 @@
 title: "Quantitative Methods and Mathematical Thinking"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/qm-teaching-2023
 venue: "UCL, Arts and Sciences"
 date: 2023-01-01
 location: "London, UK"
