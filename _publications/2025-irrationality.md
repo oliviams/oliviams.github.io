@@ -1,7 +1,7 @@
 ---
 title: "(Ir)rationality in AI: State of the Art, Research Challenges and Open Questions"
 collection: publications
-permalink: /publication/2023-irrationality
+permalink: /publication/2025-irrationality
 date: 2025-08-22
 venue: 'Artificial Intelligence Review'
 paperurl: '[https://arxiv.org/abs/2311.17165](https://link.springer.com/article/10.1007/s10462-025-11341-4)'
