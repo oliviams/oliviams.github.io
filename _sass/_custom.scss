@@ -1,0 +1,13 @@
+/* _sass/_custom.scss */
+.masthead {
+  background-color: #003366; /* your header color */
+}
+
+.masthead .site-title,
+.masthead .site-nav a {
+  color: #ffffff; /* header text and nav link color */
+}
+
+.masthead .site-nav a:hover {
+  color: #ffcc00; /* hover color for links */
+}
