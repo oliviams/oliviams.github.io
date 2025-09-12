@@ -2,7 +2,7 @@
 title: "(Ir)rationality and Cognitive Biases in Large Language Models"
 collection: publications
 permalink: /publication/2024-llm-rationality
-date: 2024-2-14
+date: 2024-02-14
 venue: 'Royal Society Open Science'
 paperurl: 'https://royalsocietypublishing.org/doi/10.1098/rsos.240255'
 ---
