@@ -2,9 +2,11 @@
 title: "Interdisciplinary Game Theory"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/gt-teaching-2024
+permalink: /teaching/gt
 venue: "UCL, Arts and Sciences"
-date: 2024-01-01
+years:
+  - 2023
+  - 2024
 location: "London, UK"
 ---
 
