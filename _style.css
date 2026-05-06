@@ -1,0 +1,322 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #faf8f4;
+  --warm-white: #f5f2ec;
+  --border: #ede8df;
+  --text: #1a1a1a;
+  --muted: #666;
+  --hint: #999;
+  --accent: #b07848;
+  --accent-light: #f0e6d6;
+  --accent-border: #ddd0bc;
+  --green-bg: #e8f0e4;
+  --green-text: #4a6a3a;
+  --green-border: #c4d4b8;
+  --tag-bg: #f0e8dc;
+  --tag-text: #8a6040;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Georgia', serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.nav {
+  background: var(--cream);
+  padding: 16px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left { display: flex; flex-direction: column; gap: 8px; }
+
+.nav-logo {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
+}
+.nav-logo:hover { color: var(--accent); }
+
+.nav-icons { display: flex; gap: 12px; align-items: center; }
+
+.nav-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 4px;
+  color: #bbb;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-icon:hover { color: var(--accent); background: var(--accent-light); }
+.nav-icon svg { width: 14px; height: 14px; fill: currentColor; }
+.nav-icon svg.stroke { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.tooltip-wrap { position: relative; display: flex; }
+.tooltip {
+  display: none; position: absolute; top: 28px; left: 50%;
+  transform: translateX(-50%);
+  background: #2a1a0a; color: #e8d0b0;
+  font-family: system-ui, sans-serif;
+  font-size: 11px; padding: 3px 8px;
+  border-radius: 4px; white-space: nowrap; pointer-events: none; z-index: 200;
+}
+.tooltip-wrap:hover .tooltip { display: block; }
+
+.nav-links { display: flex; gap: 4px; }
+
+.nav-link {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px; padding: 5px 14px;
+  border-radius: 20px; color: #888;
+  border: 0.5px solid transparent;
+  transition: all 0.15s;
+}
+.nav-link:hover { color: #333; background: var(--warm-white); }
+.nav-link.active {
+  color: #7a4f2e; background: var(--accent-light);
+  border-color: var(--accent-border);
+}
+
+/* MAIN CONTENT */
+.main { max-width: 780px; margin: 0 auto; padding: 48px 48px 80px; }
+
+/* HOME */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 148px;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.home-name {
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.home-role {
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.home-affil {
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  color: var(--hint);
+  margin-bottom: 20px;
+}
+
+.home-bio {
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 20px;
+  border: 0.5px solid var(--accent-border);
+}
+.tag.green {
+  background: var(--green-bg);
+  color: var(--green-text);
+  border-color: var(--green-border);
+}
+
+.avatar {
+  width: 132px; height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--cream);
+  outline: 1px solid var(--border);
+  display: block;
+}
+
+/* DIVIDER */
+.divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* SECTION EYEBROW */
+.eyebrow {
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* NEWS */
+.news-item {
+  display: flex; gap: 16px; align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.news-item:last-child { border-bottom: none; }
+.news-date {
+  font-family: system-ui, sans-serif;
+  font-size: 11px; color: #bbb; min-width: 64px; flex-shrink: 0;
+}
+.news-text {
+  font-family: system-ui, sans-serif;
+  font-size: 13px; color: #444; line-height: 1.5;
+}
+.news-text a { color: var(--accent); }
+.news-text a:hover { text-decoration: underline; }
+
+/* PUBLICATIONS */
+.pub-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-year {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: #bbb; padding-top: 2px;
+}
+.pub-title {
+  font-family: 'Georgia', serif;
+  font-size: 15px; color: var(--text);
+  line-height: 1.4; margin-bottom: 5px;
+}
+.pub-venue {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: var(--accent); margin-bottom: 3px;
+}
+.pub-authors {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: var(--hint); margin-bottom: 8px;
+}
+.pub-links { display: flex; gap: 6px; }
+.pub-link {
+  font-family: system-ui, sans-serif;
+  font-size: 11px; color: var(--accent);
+  padding: 2px 8px;
+  border: 0.5px solid var(--accent-border);
+  border-radius: 4px;
+  transition: background 0.12s;
+}
+.pub-link:hover { background: var(--accent-light); }
+
+/* CV */
+.cv-download {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px; color: #7a4f2e;
+  padding: 8px 18px;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  margin-bottom: 32px;
+  transition: background 0.12s;
+}
+.cv-download:hover { background: var(--accent-light); }
+
+.cv-section { margin-bottom: 32px; }
+
+.cv-item {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.cv-item:last-child { border-bottom: none; }
+.cv-date {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: #bbb; padding-top: 2px;
+}
+.cv-org {
+  font-family: 'Georgia', serif;
+  font-size: 15px; color: var(--text); margin-bottom: 2px;
+}
+.cv-role {
+  font-family: system-ui, sans-serif;
+  font-size: 13px; color: var(--accent); margin-bottom: 3px;
+}
+.cv-detail {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: #888; line-height: 1.6;
+}
+
+/* TALKS & TEACHING */
+.item {
+  padding: 16px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.item:last-child { border-bottom: none; }
+.item-title {
+  font-family: 'Georgia', serif;
+  font-size: 15px; color: var(--text); margin-bottom: 4px;
+}
+.item-venue {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: var(--accent); margin-bottom: 2px;
+}
+.item-meta {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: var(--hint);
+}
+.item-detail {
+  font-family: system-ui, sans-serif;
+  font-size: 12px; color: #888; line-height: 1.6; margin-top: 4px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 48px;
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #bbb;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .nav { padding: 14px 20px; flex-wrap: wrap; }
+  .main { padding: 32px 20px 60px; }
+  .home-grid { grid-template-columns: 1fr; }
+  .avatar { width: 100px; height: 100px; }
+  .home-name { font-size: 28px; }
+  .pub-item, .cv-item { grid-template-columns: 1fr; gap: 4px; }
+  .pub-year, .cv-date { font-size: 11px; color: #bbb; }
+}
