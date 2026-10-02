@@ -1,6 +1,6 @@
 :root{--bg:#FAF6EE;--ink:#173238;--body:#34494D;--muted:#5E7378;--teal:#007C84;--teal-d:#00595F;--brick:#C8472A;--gold:#D9A441;--navy:#315B8C;--line:#E3DACB;
  --head:'Source Serif 4',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;
- --grad:linear-gradient(135deg,#006F77 0%,#00858D 38%,#C8472A 100%)}
+ --grad:linear-gradient(90deg,#1F4478,#00858D)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
 a{color:inherit}
