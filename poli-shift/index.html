@@ -39,6 +39,10 @@ img{max-width:100%;display:block}
 /* nav */
 .nav{position:sticky;top:0;z-index:30;background:rgba(247,245,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.navleft{display:flex;align-items:center;gap:14px}
+.homeicon{display:block;line-height:0;border-radius:9px;transition:transform .15s,box-shadow .15s}
+.homeicon img{width:36px;height:36px;border-radius:9px;display:block}
+.homeicon:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(23,50,56,.25)}
 .brand{display:flex;flex-direction:column;gap:4px}
 .brand-name{font:700 21px 'Newsreader',serif;letter-spacing:-.01em}
 .brand-bar{width:44px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--blue),var(--red))}
@@ -271,9 +275,11 @@ th{background:#F7F1E8;font-weight:600}
 <body>
 
 <nav class="nav"><div class="wrap navin">
-  <a class="brand" href="#top" aria-label="Poli-SHIFT home"><div class="brand-name">Poli‑SHIFT</div><div class="brand-bar"></div></a>
+  <div class="navleft">
+    <a class="homeicon" href="/" aria-label="Back to oliviams.com" title="Back to oliviams.com"><img src="/favicon.svg" alt="" width="36" height="36"></a>
+    <a class="brand" href="#top" aria-label="Poli-SHIFT home"><div class="brand-name">Poli‑SHIFT</div><div class="brand-bar"></div></a>
+  </div>
   <div class="links">
-    <a class="navlink" href="/">← oliviams.com</a>
     <a class="navlink" href="#pipeline">Design</a>
     <a class="navlink" href="#results">Results</a>
     <a class="navlink" href="#explore-model">Models</a>
