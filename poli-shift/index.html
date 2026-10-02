@@ -58,7 +58,6 @@ img{max-width:100%;display:block}
 .hero .inner{max-width:980px;margin:0 auto}
 .eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:14px;font-weight:700;color:var(--plum)}
 .hero-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 30px;font:700 21px 'Newsreader',serif;letter-spacing:.01em;color:var(--ink);margin-bottom:20px;box-shadow:0 1px 3px rgba(20,23,31,.06);min-width:120px;text-decoration:none;transition:box-shadow .15s ease,border-color .15s ease}
-.hero-badge:hover{border-color:var(--teal,#00959D);box-shadow:0 2px 8px rgba(20,23,31,.12)}
 h1.display{font:600 42px/1.2 'Newsreader',serif;letter-spacing:-.01em;margin:16px auto 18px;max-width:960px}
 .hero .subtitle{font:400 21px/1.4 'Newsreader',serif;color:#2F474D;max-width:700px;margin:0 auto 14px}
 .hero .desc{font-size:16px;color:#495F63;max-width:640px;margin:0 auto 18px}
@@ -178,7 +177,7 @@ th{background:#F7F1E8;font-weight:600}
 .resources{background:#173238;color:#fff}
 .resources .eyebrow{color:#A2D8DB}
 .resources h2{color:#fff}
-.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.resource-grid{display:grid;grid-template-columns:minmax(0,460px);gap:14px}
 .resource-grid a{border:1px solid #31494F;border-radius:12px;padding:20px;display:block}
 .resource-grid a:hover{border-color:#3B5358}
 .resource-grid h3{margin:0 0 6px;font-size:18px;font-weight:600}
@@ -219,7 +218,6 @@ th{background:#F7F1E8;font-weight:600}
 .pipeline-link{font-size:13px;font-weight:600;color:var(--ink)}
 .abs-link{margin-top:10px!important}
 .abs-link a{font-weight:600;color:var(--teal,#00959D);text-decoration:underline;text-underline-offset:3px}
-.scope-note{margin-top:8px;font-size:11.5px;line-height:1.5;color:var(--muted)}
 .stat-note,.ex-note,.res-note{font-size:13px;line-height:1.55;color:var(--muted);max-width:760px}
 .stat-note{margin-top:16px}
 .ex-note{margin:18px 0 26px}
@@ -289,19 +287,17 @@ th{background:#F7F1E8;font-weight:600}
     <a class="navlink" href="#pipeline">Design</a>
     <a class="navlink" href="#results">Results</a>
     <a class="navlink" href="#explore-model">Models</a>
-    <a class="btn primary small" href="https://github.com/oliviams/poli-shift" target="_blank" rel="noopener">Code &amp; data</a>
   </div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap"><div class="inner">
-    <a class="hero-badge" href="https://github.com/oliviams/poli-shift" aria-label="Poli-SHIFT on GitHub" target="_blank" rel="noopener">Poli‑SHIFT</a>
+    <div class="hero-badge">Poli‑SHIFT</div>
     <h1 class="display"><b>Framing the Narrative:</b><br>Ideological Mimicry in Large Language Models</h1>
     <div class="subtitle">Political stance in LLMs is interaction-dependent.</div>
     <p class="desc">Poli‑SHIFT is a dataset and evaluation framework for testing whether signals about the user's political stance systematically move the political stance an LLM expresses.</p>
     <div class="authors">Olivia Macmillan‑Scott · Michael Jacobs · Nils Metternich · Mirco Musolesi</div>
     <div class="actions">
       <a href="https://arxiv.org/abs/2609.38256" class="btn primary" target="_blank" rel="noopener">Read the paper →</a>
-      <a href="https://github.com/oliviams/poli-shift" class="btn" target="_blank" rel="noopener">Code &amp; data</a>
     </div>
 </div></div></header>
 
@@ -310,28 +306,24 @@ th{background:#F7F1E8;font-weight:600}
     <button class="scope-card" style="--accent:#315B8C" onclick="toggleScope('models')" aria-expanded="false" aria-controls="scope-models"><strong>7</strong><span>open-weight LLMs</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
     <div id="scope-models" class="scope-drop" style="display:none;--accent:#315B8C">
       <span style="color:#315B8C">Command A · DeepSeek V4 Flash · Falcon 3 10B · Gemma 3 27B · Llama 4 Scout · Mistral Large · Qwen 3.6 27B</span>
-      <div class="scope-note">The latest model from each family; all are open-weight.</div>
     </div>
   </div>
   <div class="scope-col">
     <button class="scope-card" style="--accent:#B8834A" onclick="toggleScope('topics')" aria-expanded="false" aria-controls="scope-topics"><strong>10</strong><span>political topics</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
     <div id="scope-topics" class="scope-drop" style="display:none;--accent:#B8834A">
       <span style="color:#B8834A">Climate Change · Immigration &amp; Asylum · LGBT+ Rights · Healthcare · Israel–Palestine · Russia–Ukraine · Abortion · Brexit · Gun Control · Indigenous Rights</span>
-      <div class="scope-note">Each topic is posed with matched pro-side and anti-side formulations.</div>
     </div>
   </div>
   <div class="scope-col">
     <button class="scope-card" style="--accent:#F07167" onclick="toggleScope('countries')" aria-expanded="false" aria-controls="scope-countries"><strong>3</strong><span>countries</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
     <div id="scope-countries" class="scope-drop" style="display:none;--accent:#F07167">
       <span style="color:#F07167">United States · United Kingdom · Australia</span>
-      <div class="scope-note">Not every topic was collected in every country; six topics cover all three.</div>
     </div>
   </div>
   <div class="scope-col">
     <button class="scope-card" style="--accent:#00959D" onclick="toggleScope('formats')" aria-expanded="false" aria-controls="scope-formats"><strong>2</strong><span>elicitation formats</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
     <div id="scope-formats" class="scope-drop" style="display:none;--accent:#00959D">
       <span style="color:#00959D">Multiple choice · Open text (LLM-judged)</span>
-      <div class="scope-note">Multiple choice uses a 5-point scale. Open-text answers are scored by three LLM judges on the same scale.</div>
     </div>
   </div>
 </div></div>
@@ -716,11 +708,9 @@ th{background:#F7F1E8;font-weight:600}
 
 <section class="section resources"><div class="wrap">
   <div class="eyebrow">Explore Poli‑SHIFT</div>
-  <h2 style="font-size:28px;margin:8px 0 20px;font-weight:600">Paper, dataset and code.</h2>
+  <h2 style="font-size:28px;margin:8px 0 20px;font-weight:600">Read the paper.</h2>
   <div class="resource-grid">
     <a href="https://arxiv.org/abs/2609.38256" target="_blank" rel="noopener"><h3>Paper →</h3><p>Full methods, results, robustness checks and limitations.</p></a>
-    <a href="https://github.com/oliviams/poli-shift" target="_blank" rel="noopener"><h3>Dataset →</h3><p>Prompts, conditions, model outputs and annotations. Full release upon acceptance.</p></a>
-    <a href="https://github.com/oliviams/poli-shift" target="_blank" rel="noopener"><h3>Code →</h3><p>Experimental and analysis code for reproducing Poli‑SHIFT.</p></a>
   </div>
 </div></section>
 
