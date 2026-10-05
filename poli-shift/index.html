@@ -65,16 +65,12 @@ h1.display{font:600 42px/1.2 'Newsreader',serif;letter-spacing:-.01em;margin:16p
 .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 
 /* scope band */
-.scope-band{padding-top:40px;padding-bottom:40px}
-.scope-grid{display:flex;gap:20px;align-items:flex-start}
-.scope-col{flex:1;display:flex;flex-direction:column;min-width:0}
-.scope-card{position:relative;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:16px 38px 16px 20px;display:flex;align-items:baseline;gap:10px;cursor:pointer;text-align:left;font-family:inherit}
-.scope-card strong{font:600 28px 'Newsreader',serif;line-height:1}
-.scope-card span{font-size:13px;color:var(--muted)}
-.scope-chevron{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--muted);transition:transform .18s ease}
-.scope-card[aria-expanded="true"] .scope-chevron{transform:translateY(-50%) rotate(180deg)}
+.band{padding:40px 0 34px}
+.scope{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.scope div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 18px;display:flex;align-items:baseline;gap:8px}
+.scope b{font:600 26px 'Newsreader',serif;line-height:1}
+.scope span{font-size:13px;color:var(--muted)}
 :focus-visible{outline:3px solid rgba(0,149,157,.34);outline-offset:3px}
-.scope-drop{margin-top:8px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;font-size:13px;line-height:1.9;font-weight:400}
 .sortable-th{cursor:pointer;user-select:none;padding:9px 14px;text-align:left;border-bottom:1px solid #DEE4EC;background:#F7F1E8;font-weight:600}
 .sortable-th:hover{text-decoration:underline}
 .sort-arrow{opacity:0.45;font-size:10px;margin-left:4px}
@@ -122,11 +118,10 @@ h1.display{font:600 42px/1.2 'Newsreader',serif;letter-spacing:-.01em;margin:16p
 .ex-chart .cap{font-size:11.5px;color:var(--muted);margin-top:10px;text-align:center}
 
 /* stat band */
-.stat-band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0}
-.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.stat-grid>div{background:#fff;padding:22px 24px}
-.stat-grid b{display:block;font:600 32px 'Newsreader',serif;color:var(--ink)}
-.stat-grid span{font-size:13px;line-height:1.55;color:var(--muted);display:block;margin-top:8px}
+.stat-band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:42px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.stat-grid b{display:block;font:600 46px/1 'Newsreader',serif;letter-spacing:-.02em;color:var(--plum);margin-bottom:10px}
+.stat-grid span{font-size:14.5px;line-height:1.55;color:var(--muted);display:block}
 
 /* results charts */
 .chart-card{padding-top:18px;border-top:2px solid var(--line)}
@@ -185,8 +180,7 @@ th{background:#F7F1E8;font-weight:600}
 .footer{padding:26px 0;color:#718286;font-size:13px}
 
 @media(max-width:980px){
-  .scope-grid{flex-direction:column}
-  .explore-grid{grid-template-columns:1fr}
+    .explore-grid{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:1fr}
   .two-col{grid-template-columns:1fr}
   .resource-grid{grid-template-columns:1fr}
@@ -301,31 +295,11 @@ th{background:#F7F1E8;font-weight:600}
     </div>
 </div></div></header>
 
-<div class="wrap scope-band"><div class="scope-grid">
-  <div class="scope-col">
-    <button class="scope-card" style="--accent:#315B8C" onclick="toggleScope('models')" aria-expanded="false" aria-controls="scope-models"><strong>7</strong><span>open-weight LLMs</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
-    <div id="scope-models" class="scope-drop" style="display:none;--accent:#315B8C">
-      <span style="color:#315B8C">Command A · DeepSeek V4 Flash · Falcon 3 10B · Gemma 3 27B · Llama 4 Scout · Mistral Large · Qwen 3.6 27B</span>
-    </div>
-  </div>
-  <div class="scope-col">
-    <button class="scope-card" style="--accent:#B8834A" onclick="toggleScope('topics')" aria-expanded="false" aria-controls="scope-topics"><strong>10</strong><span>political topics</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
-    <div id="scope-topics" class="scope-drop" style="display:none;--accent:#B8834A">
-      <span style="color:#B8834A">Climate Change · Immigration &amp; Asylum · LGBT+ Rights · Healthcare · Israel–Palestine · Russia–Ukraine · Abortion · Brexit · Gun Control · Indigenous Rights</span>
-    </div>
-  </div>
-  <div class="scope-col">
-    <button class="scope-card" style="--accent:#F07167" onclick="toggleScope('countries')" aria-expanded="false" aria-controls="scope-countries"><strong>3</strong><span>countries</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
-    <div id="scope-countries" class="scope-drop" style="display:none;--accent:#F07167">
-      <span style="color:#F07167">United States · United Kingdom · Australia</span>
-    </div>
-  </div>
-  <div class="scope-col">
-    <button class="scope-card" style="--accent:#00959D" onclick="toggleScope('formats')" aria-expanded="false" aria-controls="scope-formats"><strong>2</strong><span>elicitation formats</span><span class="scope-chevron" aria-hidden="true">⌄</span></button>
-    <div id="scope-formats" class="scope-drop" style="display:none;--accent:#00959D">
-      <span style="color:#00959D">Multiple choice · Open text (LLM-judged)</span>
-    </div>
-  </div>
+<div class="wrap band"><div class="scope">
+  <div title="Command A · DeepSeek V4 Flash · Falcon 3 10B · Gemma 3 27B · Llama 4 Scout · Mistral Large · Qwen 3.6 27B"><b>7</b><span>open-weight LLMs</span></div>
+  <div title="Climate Change · Immigration &amp; Asylum · LGBT+ Rights · Healthcare · Israel–Palestine · Russia–Ukraine · Abortion · Brexit · Gun Control · Indigenous Rights"><b>10</b><span>political topics</span></div>
+  <div title="United States · United Kingdom · Australia"><b>3</b><span>countries</span></div>
+  <div title="Multiple choice · Open text (LLM-judged)"><b>2</b><span>elicitation formats</span></div>
 </div></div>
 
 <div class="stat-band"><div class="wrap stat-grid">
@@ -333,7 +307,7 @@ th{background:#F7F1E8;font-weight:600}
   <div><b>+0.87</b><span>Using terminology from one side of a debate or the other in the same question shifts the average stance of models by 0.87 points on a 5-point scale.</span></div>
   <div><b>+1.21</b><span>Providing a politically valenced premise shifts stance even further: 1.21 points on average.</span></div>
 </div>
-<div class="wrap"><div class="stat-note">Stance is scored on a 5-point scale, where higher means more pro-side. &ldquo;Pro-side&rdquo; and &ldquo;anti-side&rdquo; are the two ends of each issue, such as supporting or opposing military aid to Ukraine.</div></div></div>
+</div>
 
 <section class="section" id="explore" style="background:#EAEFF4"><div class="wrap">
 
@@ -341,6 +315,7 @@ th{background:#F7F1E8;font-weight:600}
     <div class="eyebrow">Three experimental conditions</div>
     <h2>Same model. Different framing. Different stance.</h2>
     <p>Poli‑SHIFT holds the underlying policy question fixed and varies one interaction signal at a time. Pick a treatment, then pick a variant, to see the typical direction a model's stance moves (averaged across all seven models).</p>
+    <p class="stat-note" style="margin-top:12px;font-size:13.5px">Stance is scored on a 5-point scale, where higher means more pro-side. &ldquo;Pro-side&rdquo; and &ldquo;anti-side&rdquo; are the two ends of each issue, such as supporting or opposing military aid to Ukraine.</p>
   </div>
 
   <div class="tabs">
@@ -717,16 +692,6 @@ th{background:#F7F1E8;font-weight:600}
 <footer class="footer"><div class="wrap">© 2026 Macmillan‑Scott, Jacobs, Metternich &amp; Musolesi · Poli‑SHIFT</div></footer>
 
 <script>
-function toggleScope(key){
-  var el = document.getElementById('scope-'+key);
-  var btn = document.querySelector('[aria-controls="scope-'+key+'"]');
-  var open = el.style.display !== 'none';
-  document.querySelectorAll('.scope-drop').forEach(function(d){ d.style.display='none'; });
-  document.querySelectorAll('.scope-card[aria-expanded]').forEach(function(b){ b.setAttribute('aria-expanded','false'); });
-  el.style.display = open ? 'none' : 'block';
-  if (btn) btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-}
-
 var MODEL_EXPLORE_KEYS = ['command_a','deepseek_or','falcon_10b','gemma3_or','llama4_or','mistral_or','qwen36_or'];
 var MODEL_ACTIVE_STYLE = 'background:#173238;color:#FFFFFF;border:1px solid #173238;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;';
 var MODEL_INACTIVE_STYLE = 'background:#FFFFFF;color:#173238;border:1px solid #CFDBD8;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;';
